@@ -8,8 +8,8 @@ def get_validate_input(prompt:str,input_type:str = "str"):
         if input_type == "int":
             try:
                 value = int(user_input)
-                if 1 < value < 5000 :
-                    print("Dữ liệu không âm")
+                if value < 1 or value > 5000 :
+                    print("Dữ liệu không hợp lệ")
                     continue
                 return value
             except ValueError:
@@ -18,7 +18,7 @@ def get_validate_input(prompt:str,input_type:str = "str"):
         if input_type == "float":
             try:
                 value = float(user_input)
-                if value < 0 :
+                if value <= 0 :
                     print("Dữ liệu không âm")
                     continue
                 return value
