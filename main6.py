@@ -112,11 +112,11 @@ class OrderManager:
         for ord in self.orders:
                 if ord.id == self.id:
                     really = get_validate_input("Bạn có chắc chứ(Y/N): ")
-                    if really == "Y".lower():
+                    if really.lower() == "Y".lower():
                         self.orders.remove(ord)
                         print("Đã xóa")
                         break
-                    elif really == "N".lower():
+                    elif really.lower() == "N".lower():
                         print("Không xóa sản phẩm")
                         break
         else:
