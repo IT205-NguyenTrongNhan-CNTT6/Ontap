@@ -8,7 +8,7 @@ def get_validate_input(prompt:str,input_type:str = "str"):
         if input_type == "int":
             try:
                 value = int(user_input)
-                if value < 0 :
+                if 1 < value < 5000 :
                     print("Dữ liệu không âm")
                     continue
                 return value
